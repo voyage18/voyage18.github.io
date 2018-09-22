@@ -1,7 +1,7 @@
 {
   "name": "voyage18",
   "version": "0.1.0",
-  "homepage": "http://voyage18.github.io/voyage18.github.io",
+  "homepage": "http://voyage18.github.io",
   "private": true,
   "dependencies": {
     "react": "^16.5.1",
@@ -12,7 +12,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
