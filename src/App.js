@@ -1,15 +1,33 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import "./App.css";
 
 class App extends Component {
-  render() {
+  state = {
+    view: "Home"
+  };
+
+  renderNavigator = () => {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Skeleton</h1>
-        </header>
-        <p className="App-intro">
-          Skeleton
-        </p>
+      <nav className="App-nav">
+        {["Home", "View", "About"].map(button => {
+          return (
+            <h3 key={`${button}-button`} className="App-nav-header">
+              <button onClick={() => this.setState({ view: button })}>
+                {button}
+              </button>
+            </h3>
+          );
+        })}
+      </nav>
+    );
+  };
+
+  render() {
+    const { view } = this.state;
+    return (
+      <div className={`App ${view}`}>
+        <header className="App-header">{this.renderNavigator()}</header>
+        <p className="App-intro">Skeleton</p>
       </div>
     );
   }

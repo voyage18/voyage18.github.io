@@ -1,0 +1,15 @@
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+}
+
+.Home {
+  background: url("https://s3.amazonaws.com/voyage18-images/00.JPG") no-repeat
+    center center fixed;
+  background-size: cover;
+}
