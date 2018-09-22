@@ -7,11 +7,15 @@ class App extends Component {
   };
 
   renderNavigator = () => {
+    const { view } = this.state;
+    const navClassName = `App-nav-header ${
+      view === "Home" ? "white" : "black"
+    }`;
     return (
       <nav className="App-nav">
         {["Home", "View", "About"].map(button => {
           return (
-            <h3 key={`${button}-button`} className="App-nav-header">
+            <h3 key={`${button}-button`} className={navClassName}>
               <button onClick={() => this.setState({ view: button })}>
                 {button}
               </button>
@@ -27,7 +31,6 @@ class App extends Component {
     return (
       <div className={`App ${view}`}>
         <header className="App-header">{this.renderNavigator()}</header>
-        <p className="App-intro">Skeleton</p>
       </div>
     );
   }

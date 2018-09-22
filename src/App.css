@@ -3,9 +3,31 @@
   width: 100vw;
 }
 
+.black {
+  color: #2a2a2a;
+}
+
+.white {
+  color: white;
+}
+
 .App {
   height: 100%;
+  font-family: "Raleway", sans-serif;
   width: 100%;
+}
+
+.App-nav {
+  display: flex;
+  flex-direction: row;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  justify-content: flex-end;
+  padding-top: 15px;
+}
+
+.App-nav-header {
+  margin-right: 20px;
 }
 
 .Home {
